@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+
+
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_box</item>
+        <item name="colorAccent">#110F0F</item>
+        <item name="colorControlNormal">#050404</item>
+        <item name="colorControlActivated">#000000</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.TextInputLayout</item>
+
+
+    </style>
+
+   <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+    <item name="android:textColor">@android:color/holo_red_dark</item>
+    <item name="colorAccent">@android:color/white</item>
+
+    <item name="colorControlNormal">@android:color/holo_red_dark</item>
+    <item name="colorControlActivated">@android:color/holo_green_dark</item>
+    <item name="colorControlHighlight">@android:color/holo_purple</item>
+    <item name="android:textSize">14sp</item>
+</style>
+
+    <style name="dialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="colorControlNormal">#2196F3</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#2196F3</item>
+        <item name="colorControlActivated">#009688</item>
+
+        <item name="android:statusBarColor">@android:color/black</item>
+
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+</resources>

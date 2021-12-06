@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = "PercentageChartView"
+    bintrayName = "com.ramijemli.percentagechartview"
+    libraryName = "percentagechartview"
+
+    publishedGroupId = 'com.ramijemli.percentagechartview'
+    artifact = 'percentagechartview'
+    libraryVersion = '0.3.1'
+
+    libraryDescription = 'An Android percentage chart custom view that displays the progress of any single given task or information.'
+    siteUrl = 'https://github.com/RamiJ3mli/PercentageChartView'
+    gitUrl = 'https://github.com/RamiJ3mli/PercentageChartView.git'
+    developerId = 'ramijemli'
+    developerName = 'Rami Jemli'
+    developerEmail = 'jemli.idea@gmail.com'
+    licenseName = 'The Apache Software Licence, Version 2.0'
+    licenseUrl = 'https://www.apache.org/licenses/LICENSE-2.0'
+    allLicenses = ["Apache-2.0"]
+
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 7
+        versionName "0.3.1"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+}
+
+if (rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+}

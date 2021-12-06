@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/black"
+    android:paddingLeft="5dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ip3"
+        android:text="."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textview06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_toLeftOf="@+id/ip2"
+        android:text="."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <EditText
+        android:id="@+id/ip1"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_toLeftOf="@+id/ip2"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@+id/ip2"
+        android:selectAllOnFocus="true"
+        android:text="192" />
+
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/ip1"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/ip1"
+        android:text="IP - "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dip"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/ip4"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@+id/etdbname"
+        android:selectAllOnFocus="true"
+        android:text="25" />
+
+    <EditText
+        android:id="@+id/ip2"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ip1"
+        android:layout_alignBottom="@+id/ip1"
+        android:layout_toLeftOf="@+id/TextView01"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@+id/ip3"
+        android:selectAllOnFocus="true"
+        android:text="168" />
+
+    <EditText
+        android:id="@+id/ip3"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_toLeftOf="@+id/ip4"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@+id/ip4"
+        android:selectAllOnFocus="true"
+        android:text="0">
+
+
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/etdbname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip4"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="40dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="5dip"
+        android:hint="DBNAME"
+        android:nextFocusDown="@+id/buttonok"></EditText>
+
+    <EditText
+        android:id="@+id/etdbuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etdbname"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="5dip"
+        android:hint="Username"
+        android:nextFocusDown="@+id/buttonok"></EditText>
+
+    <EditText
+        android:id="@+id/etdbpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etdbuser"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="5dip"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:nextFocusDown="@+id/ethexphno"></EditText>
+
+    <EditText
+        android:id="@+id/etonlineserver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etdbpass"
+        android:hint="sv38.dbsqlserver.com:8888"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etdbname"
+        android:layout_alignLeft="@+id/ip4"
+        android:layout_alignBottom="@+id/TextView01"
+        android:text="."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+
+        android:id="@+id/buttonok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etonlineserver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:text="OK" />
+
+
+    <TextView
+        android:id="@+id/tvFCMToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonok"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dip"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFCMToken"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dip"
+        android:text="@string/Version" />
+
+
+</RelativeLayout>
